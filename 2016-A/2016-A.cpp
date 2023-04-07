@@ -9,7 +9,7 @@ int main()
 	int N;
 	cin >> N;
 
-	long long int chislo = pow(N,N);
+	signed long long int chislo = pow(N,N);
 
 	//cout << chislo << endl;
 
@@ -54,4 +54,3 @@ int main()
 
 	return 0;
 }
-
