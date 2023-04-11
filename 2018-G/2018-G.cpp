@@ -50,29 +50,20 @@ int findRepeat0(int arr[], int n) {
 
 int main()
 {
-	string n;
+	long int n;
 
-	cin >> n;
-
-	while (n != " ")
+	while (cin >> n;)
 	{
-		const int lenght = n.length();
 
-		char* char_array = new char[lenght + 1];
-
-		strcpy(char_array, n.c_str());
-
-		long long int number = atoi(char_array);
-
-		int digits = CountDigits(number);
+		int digits = CountDigits(n);
 
 		int* arr = new int[digits];
 
 		for (int i = digits - 1; i >= 0; i--)
 		{
-			arr[i] = number % 10;
+			arr[i] = n % 10;
 
-			number = number / 10;
+			n = n / 10;
 		}
 
 		int count1 = findRepeat1(arr, digits);
@@ -80,7 +71,7 @@ int main()
 		int count0 = findRepeat0(arr, digits);
 
 		cout << count0 << " " << count1 << endl;
-
-		cin >> n;
 	}
+
+	return 0;
 }
